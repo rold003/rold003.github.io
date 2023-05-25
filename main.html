@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+        <title>Encriptador Jeison Ibanias</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>             
+            <img class="logo" src="imagenes/Logo.svg" alt="alt"/> 
+        </header>
+        <main>
+            <section class="seccion1">
+                <div class="contenedor_cajaTexto">
+                <textarea  id="cajaTexto" placeholder="INGRESE SU TEXTO" /></textarea>
+                </div>
+                <div class="alerta">
+                    <img src="imagenes/alerta.svg" alt="alt"/>
+                    <p>solo letras minusculas sin acento</p>
+                </div>
+                <div class="btns">    
+                    <button type="button" id="btn_encriptar">Encriptar</button>
+                    <button type="button" id="btn_desencriptar">Desencriptar</button>
+                </div>    
+            </section>
+            <section class="seccion2">
+                <div id="Cambio">
+                <div class="contenedor_muneco">
+                    <img src="imagenes/Muñeco.svg" alt="alt"/>
+                </div>
+               
+                     <div class="contenedor_parrafo">
+                    <h3>
+                        Ningun mensaje fue</br>encontrado
+                    </h3>
+                    <p>Ingrese el texto de que desea encriptar o desencriptar</p>
+                    </div>
+                </div>
+                 <div class="contenedo_resultado">
+                  <textarea name="resultado" id="resultado"></textarea>
+                  <div class="contenedo_copiar">
+                    <button type="button" id="btn_copiar">Copiar</button>
+                  </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            
+        </footer>
+    </body>   
+    <script>
+        var botonEncriptar=document.querySelector("#btn_encriptar");
+        var botonDesencriptar=document.querySelector("#btn_desencriptar");
+        var botonCopiar=document.querySelector("#btn_copiar");
+        
+         
+         botonEncriptar.onclick=encriptar;
+         botonDesencriptar.onclick=desencriptar;
+         botonCopiar.onclick=copiar;
+
+    </script>
+    
+</html>
